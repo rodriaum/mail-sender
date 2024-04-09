@@ -3,7 +3,7 @@ using System.Net.Mail;
 
 /**
  * Author: Rodriaum (Rodrigo Ferreira)
- * Este arquivo está licenciado sob a Licença MIT.
+ * Este arquivo está licenciado sob a MIT License.
  * https://github.com/rodriaum/MailSender?tab=MIT-1-ov-file#readme
  */
 
