@@ -24,4 +24,4 @@ Autor
 
 ## Licença
 
-Este projeto está licenciado sob a Licença [nome da licença]. Consulte o arquivo LICENSE para obter mais detalhes.
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](https://github.com/rodriaum/MailSender?tab=MIT-1-ov-file#MIT-1-ov-file) para obter detalhes.
