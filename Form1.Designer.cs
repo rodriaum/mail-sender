@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             addMailButon = new Button();
             changeListTextBox = new TextBox();
             mailLabel = new Label();
@@ -50,6 +51,10 @@
             subjectTextBox = new TextBox();
             bodyLabel = new Label();
             subjectLabel = new Label();
+            openMailFileDialog = new OpenFileDialog();
+            FileTextBox = new TextBox();
+            fileUploadButton = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // addMailButon
@@ -218,13 +223,13 @@
             // 
             inputTextBox.BackColor = SystemColors.Menu;
             inputTextBox.BorderStyle = BorderStyle.None;
-            inputTextBox.Font = new Font("Segoe UI", 11F);
+            inputTextBox.Font = new Font("Segoe UI", 10F);
             inputTextBox.ForeColor = SystemColors.ControlDarkDark;
             inputTextBox.Location = new Point(260, 12);
             inputTextBox.Multiline = true;
             inputTextBox.Name = "inputTextBox";
             inputTextBox.ReadOnly = true;
-            inputTextBox.Size = new Size(519, 45);
+            inputTextBox.Size = new Size(519, 57);
             inputTextBox.TabIndex = 21;
             inputTextBox.TextAlign = HorizontalAlignment.Center;
             // 
@@ -239,7 +244,7 @@
             // sendMailButton
             // 
             sendMailButton.Font = new Font("Segoe UI", 11F);
-            sendMailButton.Location = new Point(418, 304);
+            sendMailButton.Location = new Point(304, 304);
             sendMailButton.Name = "sendMailButton";
             sendMailButton.Size = new Size(196, 36);
             sendMailButton.TabIndex = 24;
@@ -278,15 +283,54 @@
             subjectLabel.Text = "Título";
             subjectLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // openMailFileDialog
+            // 
+            openMailFileDialog.FileName = "openMailFileDialog";
+            // 
+            // FileTextBox
+            // 
+            FileTextBox.ForeColor = SystemColors.ControlDarkDark;
+            FileTextBox.Location = new Point(562, 283);
+            FileTextBox.Name = "FileTextBox";
+            FileTextBox.Size = new Size(152, 23);
+            FileTextBox.TabIndex = 29;
+            // 
+            // fileUploadButton
+            // 
+            fileUploadButton.Font = new Font("Segoe UI", 11F);
+            fileUploadButton.Location = new Point(550, 304);
+            fileUploadButton.Name = "fileUploadButton";
+            fileUploadButton.Size = new Size(196, 36);
+            fileUploadButton.TabIndex = 28;
+            fileUploadButton.Text = "Anexar Ficheiro";
+            fileUploadButton.UseVisualStyleBackColor = true;
+            fileUploadButton.Click += fileUploadButton_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.Window;
+            button1.FlatStyle = FlatStyle.System;
+            button1.Font = new Font("Segoe UI", 10F);
+            button1.Location = new Point(712, 283);
+            button1.Name = "button1";
+            button1.Size = new Size(25, 23);
+            button1.TabIndex = 30;
+            button1.Text = "⌦";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(optionsSeparatorPanel);
+            Controls.Add(fileUploadButton);
+            Controls.Add(button1);
+            Controls.Add(FileTextBox);
             Controls.Add(subjectLabel);
             Controls.Add(bodyLabel);
             Controls.Add(subjectTextBox);
-            Controls.Add(optionsSeparatorPanel);
             Controls.Add(sendMailButton);
             Controls.Add(bodyTextBox);
             Controls.Add(inputTextBox);
@@ -306,6 +350,7 @@
             Controls.Add(changeListTextBox);
             Controls.Add(addMailButon);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
@@ -337,5 +382,9 @@
         private TextBox subjectTextBox;
         internal Label bodyLabel;
         internal Label subjectLabel;
+        private OpenFileDialog openMailFileDialog;
+        private TextBox FileTextBox;
+        private Button fileUploadButton;
+        private Button button1;
     }
 }

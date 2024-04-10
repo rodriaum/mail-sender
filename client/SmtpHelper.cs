@@ -1,5 +1,6 @@
 ﻿using System.Net.Mail;
 using System.Net;
+using System.Runtime.Serialization;
 
 /**
  * Author: Rodriaum (Rodrigo Ferreira)
@@ -25,7 +26,7 @@ namespace MailSender.client
         public static SmtpClient Connection(string? userName, string? password) => Connection("smtp-mail.outlook.com", 587,  userName, password);
 
         // Message Builder
-        public static MailMessage Message(string yourMailAddress, string recipientMailAddress, string subject, string body)
+        public static MailMessage Message(string yourMailAddress, string recipientMailAddress, string subject, string body, string attachment)
         {
             MailMessage message = new MailMessage
             {
@@ -33,6 +34,9 @@ namespace MailSender.client
                 Subject = subject,
                 Body = body
             };
+
+            if (!string.IsNullOrEmpty(attachment))
+                message.Attachments.Add(new Attachment(attachment));
 
             message.To.Add(recipientMailAddress);
 
