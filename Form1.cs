@@ -16,6 +16,13 @@ namespace MailSender
             InitializeComponent();
         }
 
+        private void Logger(string message, bool isError)
+        {
+            inputTextBox.Clear();
+            inputTextBox.ForeColor = isError ? Color.Red : Color.Green;
+            inputTextBox.Text = message;
+        }
+
         private void addMailButon_Click(object sender, EventArgs e)
         {
             mailCheckedListBox.Items.Add(changeListTextBox.Text);
@@ -50,7 +57,7 @@ namespace MailSender
             }
             catch (Exception ex)
             {
-                inputTextBox.Text = "Não foi possível estabelecer conexão com o servidor!\n" + ex.Message;
+                Logger("Não foi possível estabelecer conexão com o servidor!\n" + ex.Message, true);
             }
             finally
             {
@@ -64,19 +71,15 @@ namespace MailSender
                             subjectTextBox.Text,
                             bodyTextBox.Text
                         ));
+
+                        Logger("Mail enviado para os destinatários.", false);
                     }
                 }
                 catch (Exception ex)
                 {
-                    inputTextBox.Text = "Não foi possível enviar o mail!\n" + ex.Message;
-                }
-                finally
-                {
-                    inputTextBox.Text = "Mensagem enviada com sucesso para os destinatários.";
+                    Logger("Não foi possível enviar o mail!\n" + ex.Message, true);
                 }
             }
-
-
         }
     }
 }

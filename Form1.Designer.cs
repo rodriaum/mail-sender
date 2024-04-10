@@ -218,6 +218,8 @@
             // 
             inputTextBox.BackColor = SystemColors.Menu;
             inputTextBox.BorderStyle = BorderStyle.None;
+            inputTextBox.Font = new Font("Segoe UI", 11F);
+            inputTextBox.ForeColor = SystemColors.ControlDarkDark;
             inputTextBox.Location = new Point(260, 12);
             inputTextBox.Multiline = true;
             inputTextBox.Name = "inputTextBox";
