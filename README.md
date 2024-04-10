@@ -2,10 +2,7 @@
 
 <img src="https://imgur.com/rOPT96o.png" alt="Exemplo">
 
-Este é um aplicativo de desktop desenvolvido em C# utilizando o Windows Forms que permite enviar e-mails para uma lista de destinatários. Ele utiliza o protocolo padrão SMTP (Simple Mail Transfer Protocol) para enviar os e-mails.
-
-O aplicativo permite que o usuário configure o servidor SMTP personalizado, bem como o endereço de e-mail e a senha de aplicativo que serão usados como remetente. Isso proporciona flexibilidade ao usuário para utilizar seu próprio servidor de e-mail.
-Funcionalidades
+Aplicativo de desktop desenvolvido em C# utilizando o Windows Forms que permite enviar e-mails para uma lista de destinatários. Ele utiliza o protocolo padrão SMTP (Simple Mail Transfer Protocol) para enviar os e-mails.
 
 - Envio de e-mails para uma lista de destinatários.
 - Configuração personalizada do servidor SMTP.
