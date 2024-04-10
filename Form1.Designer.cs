@@ -200,7 +200,7 @@
             hostAddressLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             hostAddressLabel.AutoSize = true;
             hostAddressLabel.Font = new Font("Times New Roman", 10F);
-            hostAddressLabel.Location = new Point(661, 351);
+            hostAddressLabel.Location = new Point(665, 351);
             hostAddressLabel.Name = "hostAddressLabel";
             hostAddressLabel.Size = new Size(33, 16);
             hostAddressLabel.TabIndex = 19;
@@ -214,9 +214,9 @@
             hostPortLabel.Font = new Font("Times New Roman", 10F);
             hostPortLabel.Location = new Point(661, 396);
             hostPortLabel.Name = "hostPortLabel";
-            hostPortLabel.Size = new Size(31, 16);
+            hostPortLabel.Size = new Size(37, 16);
             hostPortLabel.TabIndex = 20;
-            hostPortLabel.Text = "Port";
+            hostPortLabel.Text = "Porta";
             hostPortLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // inputTextBox

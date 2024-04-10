@@ -43,14 +43,19 @@ namespace MailSender
         {
             List<string> list = new List<string>();
 
-            // A lista à qual este enumerador está vinculado foi modificada. Um enumerador só pode ser usado se a lista não mudar.
+            // Um enumerador só pode ser usado se a lista não mudar.
             foreach (string s in mailCheckedListBox.Items)
                 list.Add(s);
 
             foreach (string s in list)
-                mailCheckedListBox.Items.Remove(s);
+            {
+                if (s.Equals(changeListTextBox.Text))
+                {
+                    mailCheckedListBox.Items.Remove(s);
+                }
+            }
 
-            // Limpa Text Box onde é inserido o novo mail.
+            // Limpa TextBox onde é inserido o novo mail.
             changeListTextBox.Clear();
         }
 
