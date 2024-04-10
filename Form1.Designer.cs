@@ -309,7 +309,7 @@
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "  ";
+            Text = "Remetente de E-mail";
             ResumeLayout(false);
             PerformLayout();
         }
