@@ -9,14 +9,14 @@ using System.Net.Mail;
 
 namespace MailSender
 {
-    public partial class Form1 : Form
+    public partial class OldSenderForm : Form
     {
-        public Form1()
+        public OldSenderForm()
         {
             InitializeComponent();
         }
 
-        private string? FILE { get; set; }
+        private string? AttachmentPath { get; set; }
 
         private async void Logger(string message, bool isError)
         {
@@ -63,14 +63,16 @@ namespace MailSender
         {
             SmtpClient? client = null;
 
-            try
-            {
-                client = SmtpHelper.Connection(
+            SenderBuilder? builder = new SenderBuilder(
                    hostAddressTextBox.Text,
                    Convert.ToInt16(hostPortTextBox.Text),
                    senderAddressTextBox.Text,
                    addressPasswordTextBox.Text
-               );
+                );
+
+            try
+            {
+                client = SmtpHelper.Connection(builder);
             }
             catch (Exception ex)
             {
@@ -80,14 +82,13 @@ namespace MailSender
             {
                 try
                 {
-                    foreach (string recipients in mailCheckedListBox.CheckedItems)
+                    foreach (string recipient in mailCheckedListBox.CheckedItems)
                     {
                         SmtpHelper.Send(client, SmtpHelper.Message(
-                            senderAddressTextBox.Text,
-                            recipients,
-                            subjectTextBox.Text,
-                            bodyTextBox.Text,
-                            FILE
+                            builder,
+                            new MessageBuilder(
+                                subjectTextBox.Text, bodyTextBox.Text, AttachmentPath, recipient
+                                )
                         ));
 
                         Logger("Mail enviado para os destinatário(s).", false);
@@ -99,13 +100,16 @@ namespace MailSender
                 }
 
                 // Após finalizar tudo, o sistema elimina o arquivo da pasta do programa.
-                try
+                if (!string.IsNullOrEmpty(AttachmentPath))
                 {
-                    File.Delete(FILE);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
+                    try
+                    {
+                        File.Delete(AttachmentPath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
@@ -128,8 +132,8 @@ namespace MailSender
                     // Se o usuário anexar um arquivo, irá retornar OK, e assim, irá continuar.
                     if (dialog == DialogResult.OK)
                     {
-                        FILE = openMailFileDialog.SafeFileName;
-                        FileTextBox.Text = FILE;
+                        AttachmentPath = openMailFileDialog.SafeFileName;
+                        FileTextBox.Text = AttachmentPath;
 
                         // Tenta copiar o arquivo anexado pelo usuário para a pasta do programa, assim, facilita a anexação do arquivo no mail com base na class Attachment.
                         try
@@ -163,7 +167,7 @@ namespace MailSender
         private void button1_Click(object sender, EventArgs e)
         {
             FileTextBox.Clear();
-            FILE = null;
+            AttachmentPath = null;
         }
     }
 }

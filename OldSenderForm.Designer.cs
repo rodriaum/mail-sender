@@ -1,6 +1,6 @@
 ﻿namespace MailSender
 {
-    partial class Form1
+    partial class OldSenderForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OldSenderForm));
             addMailButon = new Button();
             changeListTextBox = new TextBox();
             mailLabel = new Label();
@@ -319,7 +319,7 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // Form1
+            // OldSenderForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -352,9 +352,9 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            Name = "Form1";
+            Name = "OldSenderForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Remetente de E-mail";
+            Text = "Versão Antiga do Remetente de E-mail";
             ResumeLayout(false);
             PerformLayout();
         }

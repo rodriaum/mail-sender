@@ -1,6 +1,5 @@
 ﻿using System.Net.Mail;
 using System.Net;
-using System.Runtime.Serialization;
 
 /**
  * Author: Rodriaum (Rodrigo Ferreira)
@@ -13,32 +12,32 @@ namespace MailSender.client
     internal class SmtpHelper
     {
         // Custom Connection
-        public static SmtpClient Connection(string? host, int port, string? userName, string? password)
+        public static SmtpClient Connection(SenderBuilder login)
         {
-            return new SmtpClient(host, port)
+            return new SmtpClient(login.Host, login.Port)
             {
-                Credentials = new NetworkCredential(userName, password),
+                Credentials = new NetworkCredential(login.SenderAddress, login.Password),
                 EnableSsl = true
             };
         }
 
         // Default Simple Mail Transfer Protocol: Microsoft Outlook
-        public static SmtpClient Connection(string? userName, string? password) => Connection("smtp-mail.outlook.com", 587,  userName, password);
+        public static SmtpClient Connection(string? userName, string? password) => Connection(new SenderBuilder("smtp-mail.outlook.com", 587, userName, password));
 
         // Message Builder
-        public static MailMessage Message(string yourMailAddress, string recipientMailAddress, string subject, string body, string attachment)
+        public static MailMessage Message(SenderBuilder senderBuilder, MessageBuilder messageBuilder)
         {
             MailMessage message = new MailMessage
             {
-                From = new MailAddress(yourMailAddress),
-                Subject = subject,
-                Body = body
+                From = new MailAddress(messageBuilder.Recipient),
+                Subject = messageBuilder.Subject,
+                Body = messageBuilder.Body
             };
 
-            if (!string.IsNullOrEmpty(attachment))
-                message.Attachments.Add(new Attachment(attachment));
+            if (!string.IsNullOrEmpty(messageBuilder.AttachmentPath))
+                message.Attachments.Add(new Attachment(messageBuilder.AttachmentPath));
 
-            message.To.Add(recipientMailAddress);
+            message.To.Add(messageBuilder.Recipient);
 
             return message;
         }
