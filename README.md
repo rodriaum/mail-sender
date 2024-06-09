@@ -1,10 +1,8 @@
 # Aplicativo de Envio de E-mails em C#
 
-Versão Moderna (Em Desenvolvimento)
-<img src="https://imgur.com/opRYcBh.png" alt="New Version Example">
-
-Versão Antiga (Dísponivel para Seleção)
-<img src="https://imgur.com/rOPT96o.png" alt="Old Version Example">
+| Versão Moderna (Em Desenvolvimento) | Versão Antiga (Disponível para Seleção) |
+|:-----------------------------------:|:--------------------------------------:|
+| ![New Version Example](https://imgur.com/opRYcBh.png) | ![Old Version Example](https://imgur.com/rOPT96o.png) |
 
 Aplicativo de desktop desenvolvido em C# utilizando o Windows Forms que permite enviar e-mails para uma lista de destinatários. Ele utiliza o protocolo padrão SMTP (Simple Mail Transfer Protocol) para enviar os e-mails.
 
