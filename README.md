@@ -4,7 +4,7 @@ O projeto foi descontinuado devido a reconstrução da estrutura do projeto que 
 
 ## E-mail Sender
 
-| Versão Moderna (Em Desenvolvimento) | Versão Antiga (Disponível para Seleção) |
+| Versão Moderna (Descontinuado) | Versão Antiga (Disponível para Seleção) |
 |:-----------------------------------:|:--------------------------------------:|
 | ![New Version Example](https://imgur.com/opRYcBh.png) | ![Old Version Example](https://imgur.com/rOPT96o.png) |
 
