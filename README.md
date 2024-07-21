@@ -1,28 +1,32 @@
-# Aplicativo de Envio de E-mails em C#
+# Projeto Descontinuado
 
-| Vers„o Moderna (Em Desenvolvimento) | Vers„o Antiga (DisponÌvel para SeleÁ„o) |
+O projeto foi descontinuado devido a reconstru√ß√£o da estrutura do projeto que em breve ser√° lan√ßada em um projeto a parte.
+
+## E-mail Sender
+
+| Vers√£o Moderna (Em Desenvolvimento) | Vers√£o Antiga (Dispon√≠vel para Sele√ß√£o) |
 |:-----------------------------------:|:--------------------------------------:|
 | ![New Version Example](https://imgur.com/opRYcBh.png) | ![Old Version Example](https://imgur.com/rOPT96o.png) |
 
-Aplicativo de desktop desenvolvido em C# utilizando o Windows Forms que permite enviar e-mails para uma lista de destinat·rios. Ele utiliza o protocolo padr„o SMTP (Simple Mail Transfer Protocol) para enviar os e-mails.
+Aplicativo de desktop desenvolvido em C# utilizando o Windows Forms que permite enviar e-mails para uma lista de destinat√°rios. Ele utiliza o protocolo padr√£o SMTP (Simple Mail Transfer Protocol) para enviar os e-mails.
 
 ## Funcionalidades
 
-- Envio de e-mails para uma lista de destinat·rios.
-- ConfiguraÁ„o personalizada do servidor SMTP.
-- AutenticaÁ„o com endereÁo de e-mail e senha de aplicativo.
-- Interface intuitiva e f·cil de usar.
+- Envio de e-mails para uma lista de destinat√°rios.
+- Configura√ß√£o personalizada do servidor SMTP.
+- Autentica√ß√£o com endere√ßo de e-mail e senha de aplicativo.
+- Interface intuitiva e f√°cil de usar.
 
 ## Requisitos do Sistema
 
-- Sistema Operacional: Windows (compatÌvel com Windows 7, 8, 10, etc.).
+- Sistema Operacional: Windows (compat√≠vel com Windows 7, 8, 10, etc.).
 - Microsoft .NET Framework 8 ou superior.
 
-## ContribuiÁ„o
+## Contribui√ß√£o
 
-Se vocÍ quiser contribuir com melhorias neste aplicativo, sinta-se ‡ vontade para enviar pull requests. Toda contribuiÁ„o È bem-vinda!
+Se voc√™ quiser contribuir com melhorias neste aplicativo, sinta-se √† vontade para enviar pull requests. Toda contribui√ß√£o √© bem-vinda!
 Autor
 
-## LicenÁa
+## Licen√ßa
 
-Este projeto est· licenciado sob a LicenÁa MIT - consulte o arquivo [LICENSE](https://github.com/rodriaum/MailSender?tab=MIT-1-ov-file#MIT-1-ov-file) para obter detalhes.
+Este projeto est√° licenciado sob a Licen√ßa MIT - consulte o arquivo [LICENSE](https://github.com/rodriaum/MailSender?tab=MIT-1-ov-file#MIT-1-ov-file) para obter detalhes.
