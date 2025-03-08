@@ -1,14 +1,14 @@
-# Projeto Descontinuado
+# E-mail Sender
 
-O projeto foi descontinuado devido a reconstrução da estrutura do projeto que em breve será lançada em um projeto a parte.
+Projeto Descontinuado
 
-## E-mail Sender
+O projeto foi descontinuado devido à sua falta de utilidade, uma vez que atualmente existem grandes plataformas que já oferecem essa funcionalidade.
 
-| Versão Moderna (Descontinuado) | Versão Antiga (Disponível para Seleção) |
+| Versão Moderna (Descontinuado) | Versão Antiga (Pode Conter Falhas) |
 |:-----------------------------------:|:--------------------------------------:|
-| ![New Version Example](https://imgur.com/opRYcBh.png) | ![Old Version Example](https://imgur.com/rOPT96o.png) |
+| ![New Version Example](https://i.imgur.com/99LyeOH.png) | ![Old Version Example](https://i.imgur.com/rOPT96o.png) |
 
-Aplicativo de desktop desenvolvido em C# utilizando o Windows Forms que permite enviar e-mails para uma lista de destinatários. Ele utiliza o protocolo padrão SMTP (Simple Mail Transfer Protocol) para enviar os e-mails.
+App de desktop desenvolvido em C# utilizando o Windows Forms que permite enviar e-mails para uma lista de destinatários. Ele utiliza o protocolo padrão SMTP (Simple Mail Transfer Protocol) para enviar os e-mails.
 
 ## Funcionalidades
 
@@ -19,14 +19,9 @@ Aplicativo de desktop desenvolvido em C# utilizando o Windows Forms que permite 
 
 ## Requisitos do Sistema
 
-- Sistema Operacional: Windows (compatível com Windows 7, 8, 10, etc.).
+- Sistema Operacional: Windows (testado no w10 e w11).
 - Microsoft .NET Framework 8 ou superior.
-
-## Contribuição
-
-Se você quiser contribuir com melhorias neste aplicativo, sinta-se à vontade para enviar pull requests. Toda contribuição é bem-vinda!
-Autor
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](https://github.com/rodriaum/MailSender?tab=MIT-1-ov-file#MIT-1-ov-file) para obter detalhes.
+[MIT License](https://github.com/rodriaum/mail-sender?tab=MIT-1-ov-file#MIT-1-ov-file)
