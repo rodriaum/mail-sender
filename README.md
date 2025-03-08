@@ -1,6 +1,6 @@
 # E-mail Sender
 
-Projeto Descontinuado
+## Projeto Descontinuado
 
 O projeto foi descontinuado devido à sua falta de utilidade, uma vez que atualmente existem grandes plataformas que já oferecem essa funcionalidade.
 
